@@ -20,11 +20,10 @@ html {
 body {
 	background: $darkGray;
   font: 18px/1.4 $helvetica;
-  color: $white;
+  color: $darkerGray;
 }
 
 .container {
-  background-color: $darkerGray;
   margin: 0 auto;
   max-width: 740px;
   padding: 0 10px;
