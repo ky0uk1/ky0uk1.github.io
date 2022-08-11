@@ -1,7 +1,6 @@
 ---
-date: 05 August 2022
-author: Kyouki
 layout: post
+title: Introduction
 ---
 
 I'm Kyouki and I like to break things. That's it.
