@@ -69,4 +69,4 @@ cat {file}
 
 Using this command to read the readme file we get our password, *boJ9jbbUNNfktd78OOpsqOltutMc3MY1*.
 
-##Level 1 -> 2
+## Level 1 -> 2
