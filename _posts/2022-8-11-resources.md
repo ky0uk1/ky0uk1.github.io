@@ -8,8 +8,8 @@ Here are the resources I use for learning and tools I find useful or interesting
 ### Binary Exploitation
 
  - Learning Materials
-    - Guyinatuxedo Nightmare's - https://guyinatuxedo.github.io/
-    - LiveOverflow - https://youtu.be/iyAyN3GFM7A
+    - Guyinatuxedo Nightmare's - [https://guyinatuxedo.github.io/](https://guyinatuxedo.github.io/)
+    - LiveOverflow - [https://youtu.be/iyAyN3GFM7A](https://youtu.be/iyAyN3GFM7A)
     - PwnFunction - https://youtu.be/WnqOhgI_8wA
     - PinkDraconian - https://youtu.be/WG7QtpRPArg
     - x64 Linux Binary Exploitation - https://youtu.be/gxU3e7GbC-M
