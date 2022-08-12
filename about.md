@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm Kyouki and I work as a dev on ASP.NET, but on my free time I like to break things and tinker with technology.
+This blog is just a way to write down what I'm currently working on and share my knowledge on the security topic.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+If you want to check out my github is: [https://github.com//ky0uk1](https://github.com//ky0uk1)

@@ -11,7 +11,7 @@ Each level is a user in the machine we are connecting to, and completing the cha
 the password for the next user and so on.
 
 Remember that if you want to really learn what these games want to teach you, the best thing to do is do them
-blindly (without reading a writeup like this one lol) and research on the internet the topics presented, not the
+blindly (without reading a writeup like this one) and research on the internet the topics presented, not the
 solutions. With that in mind, writeups (for me atleast) are just a way of seeing other ways to accomplish the same
 solution, which you might have not thought of.
 
@@ -32,7 +32,7 @@ ssh {user}@{host} {port}
 So for our purposes of connecting to the host bandit.labs.overthewire.org at port 2220 with the user bandit0 the command will be:
 
 ```sh
-ssh bandit.labs.overthewire.org -p 2220 -l bandit0
+ssh bandit0@bandit.labs.overthewire.org 2220
 ```
 
 If whoever you are using Windows you can install a program called putty, on this [link](https://www.putty.org/).
