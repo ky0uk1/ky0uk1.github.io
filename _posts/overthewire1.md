@@ -70,3 +70,23 @@ cat {file}
 Using this command to read the readme file we get our password, *boJ9jbbUNNfktd78OOpsqOltutMc3MY1*.
 
 ## Level 1 -> 2
+
+For this level we need to get the password stored in a file called "-" on the home directory.
+
+We can use the ls -l command from the previous level to see that indeed there is a file called "-" on the home folder. 
+
+Unfortunately, the cat command like we did last level won't work, because the - will be interpreted as a parameter for another argument of the command, like in the ls command we use the *-*l to specify listing.
+
+So to circumvent that, we can use a relative path, which means we basically tell the cat command to access the folder and then the file.
+
+The final command will be like:
+
+```sh
+cat ./-
+```
+
+This means that the cat command will access the current working directory (which is . in the linux filesystem) and then accessing the file called "-".
+
+With that we have the password for bandit2, *CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9*.
+
+## Level 2 -> 3
