@@ -47,7 +47,7 @@ After that the description tells us that the password for bandit0 is bandit0, so
 
 The description of this level says that the password is stored in a file called readme on the home directory of the user.
 
-So, when you log in to bandit0 you should see a ~, that means we are on the home directory of the user bandit0, like this:
+So, when you log in to bandit0 you should see a `~`, that means we are on the home directory of the user bandit0, like this:
 
 ![Bandit0 Home](../images/bandit0_home.png)
 
@@ -57,9 +57,9 @@ Since we are already on the home folder of the user, all we need to do is run th
 ls -l
 ```
 
-So we can list all the files within the directory. The -l is to present the files in a list format, showing more details. 
+So we can list all the files within the directory. The `-l` is to present the files in a list format, showing more details. 
 From left to right we can see the file permissions, the first r and w means that the creator of the file can read and write, the second r means that bandit0 can read the file, then we have the user that created, which is bandit1 and the group that can read it, which in this case is bandit0.
-Lastly we have the date it was last edited and the name of the file, which is "readme".
+Lastly we have the date it was last edited and the name of the file, which is `readme`.
 
 So, this is the file we want. To read a file you can use the command:
 
@@ -71,9 +71,9 @@ Using this command to read the readme file we get our password, *boJ9jbbUNNfktd7
 
 ## Level 1 -> 2
 
-For this level we need to get the password stored in a file called "-" on the home directory.
+For this level we need to get the password stored in a file called `-` on the home directory.
 
-We can use the ls -l command from the previous level to see that indeed there is a file called "-" on the home folder. 
+We can use the `ls -l` command from the previous level to see that indeed there is a file called `-` on the home folder. 
 
 Unfortunately, the cat command like we did last level won't work, because the - will be interpreted as a parameter for another argument of the command, like in the ls command we use the *-*l to specify listing.
 
@@ -85,15 +85,15 @@ The final command will be like:
 cat ./-
 ```
 
-This means that the cat command will access the current working directory (which is . in the linux filesystem) and then accessing the file called "-".
+This means that the cat command will access the current working directory (which is . in the linux filesystem) and then accessing the file called `-`.
 
 With that we have the password for bandit2, *CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9*.
 
 ## Level 2 -> 3
 
-This level is pretty straightforward, it says that the password is stored in a file called "spaces in this filename" on the home directory.
+This level is pretty straightforward, it says that the password is stored in a file called `spaces in this filename` on the home directory.
 
-The auto complete of the shell already answers this for us, if we type "cat spaces" and press TAB, it will autocomplete with the first file located on the folder were at, so the final command will be like:
+The auto complete of the shell already answers this for us, if we type `cat spaces` and press TAB, it will autocomplete with the first file located on the folder were at, so the final command will be like:
 
 ```sh
 cat spaces\ in\ this\ filename
@@ -103,7 +103,7 @@ So, doing this cat command we get the password, *UmHadQclWmgdLOKQ3YNgjWxGoRMb5lu
 
 ## Level 3 -> 4
 
-In this one the password is in a file that is stored in a folder called inhere. From the home directory we can do a "ls -l" to see that there is a directory (which is represented by the d on the far left). To access a directory we can use
+In this one the password is in a file that is stored in a folder called inhere. From the home directory we can do a `ls -l` to see that there is a directory (which is represented by the d on the far left). To access a directory we can use
 
 ```sh
 cd {folder name}
@@ -115,7 +115,7 @@ to go to this folder. So our command will be
 cd inhere
 ```
 
-and doing another ls -l we can't find anything on this folder. That is because the file is hidden and the "ls" command won't normally show hidden files. For us to see the hidden file we need to pass another argument, the "-a".
+and doing another ls -l we can't find anything on this folder. That is because the file is hidden and the `ls` command won't normally show hidden files. For us to see the hidden file we need to pass another argument, the `-a`.
 
 Our final command will be like this:
 
@@ -123,13 +123,13 @@ Our final command will be like this:
 ls -la
 ```
 
-With this we can show files like a list (-l) and show hidden files (-a), and indeed there is a file called ".hidden". Doing the cat command as always will print to the screen the password to the next level, *pIwrPrtPN36QITSp3EQaw936yaFoFgAB*.
+With this we can show files like a list (-l) and show hidden files (-a), and indeed there is a file called `.hidden`. Doing the cat command as always will print to the screen the password to the next level, *pIwrPrtPN36QITSp3EQaw936yaFoFgAB*.
 
 ## Level 4 -> 5
 
-This level we need to find what file contains the password to the next level in the folder "inhere".
+This level we need to find what file contains the password to the next level in the folder `inhere`.
 
-Since there is only 10 files, you could just do a "cat ./{filename}" one by one until you find the answer, but that is boring. Imagine if it had 100 files, that approach would take a lot of time and effort to pull of.
+Since there is only 10 files, you could just do a `cat ./{filename}` one by one until you find the answer, but that is boring. Imagine if it had 100 files, that approach would take a lot of time and effort to pull of.
 
 So in the spirit of learning, we are going to do a simple bash script to help us!
 
@@ -147,9 +147,9 @@ And then make a file like that:
 vim /tmp/{foldername}/{filename}
 ```
 
-With that, we are presented with the VIM interface and to edit the file you can press "i".
+With that, we are presented with the VIM interface and to edit the file you can press *i*.
 
-So, briefly going over what is the objective: We need to read all the files in the folder "inhere", which is in the home folder of our current user (bandit4).
+So, briefly going over what is the objective: We need to read all the files in the folder `inhere`, which is in the home folder of our current user (bandit4).
 
 To achieve this the script could iterate through the files in the folder and print its contents to the terminal, so we need to do a for loop.
 
@@ -171,7 +171,7 @@ Going over the code from line 1 we have:
 4. The printf command is used just to print a new line to the terminal (`\n` is the equivalent of new line) just so we can see each content more clearly;
 5. The `done` marks the end to the for loop;
 
-After writing the code you can exit and save the file by doing `esc` to exit insert mode and pressing `:x`.
+After writing the code you can exit and save the file by doing *esc* to exit insert mode and pressing *:x*.
 
 To run the script just write the absolute path to it, like this:
 
