@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overthewire Bandit Level 0-5
+title: TryHackMe RootMe Box
 ---
 
 Today we're going to take a look on a machine in TryHackMe called RootMe. It is supposed to be a simple ctf to get access to a machine and do a privilege escalation. So let's get started!
