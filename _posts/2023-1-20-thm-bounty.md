@@ -46,3 +46,17 @@ Now, time for getting root!
 ## Privilege Escalation
 
 It seems that this user doesn't have root privileges, so we need to find a way to get it.
+
+Checking for SUIDs leaves us with nothing, but checking if this particular user has any access to a program as sudo, we can see that indeed the user can run `tar` as sudo, with the command:
+
+```sh
+sudo -l
+```
+
+Going to [GTFOBins](https://gtfobins.github.io/gtfobins/tar/#sudo), we can find a command to run tar as super user and not drop the elevated privileges.
+
+With that, we can go to the root folder and cat the root.txt file!
+
+Hope you liked this writeup on this entry level room!
+
+Keep learning!
